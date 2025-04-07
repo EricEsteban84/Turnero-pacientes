@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+}
+
+#Contenido {
+    width: 95%;
+    max-width: 1200px;
+    margin-top: 40px;
+    background-color: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    padding: 20px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Encabezado */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+    margin-bottom: 20px;
+}
+
+.encabezado h1 {
+    flex: 1;
+    text-align: center;
+    font-size: 36px;
+    margin: 0;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+/* Lista de pacientes */
+#pacientes-llamados {
+    flex: 1;
+    text-align: center;
+    font-size: 36px;
+    margin: 0;
+    color: #000000;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#pacientes-llamados::-webkit-scrollbar {
+    width: 8px;
+}
+#pacientes-llamados::-webkit-scrollbar-thumb {
+    background-color: #ffffff88;
+    border-radius: 10px;
+}
+
+/* Cada paciente */
+.paciente {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #ffffff, #e0f7fa);
+    color: #023e8a;
+    padding: 20px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+}
+
+.paciente:hover {
+    transform: scale(1.02);
+}
+
+.columna {
+    flex: 1;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    word-break: break-word;
+    color: #023e8a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .encabezado h1 {
+        font-size: 24px;
+    }
+
+    .columna {
+        font-size: 22px;
+    }
+
+    .paciente {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+    }
+}
