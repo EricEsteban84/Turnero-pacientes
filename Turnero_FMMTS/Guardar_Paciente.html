@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacientes</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <br>
+    <div id="Contenido">
+        <div class="Nombre-Turnero">
+            <h1>Nombres</h1>
+            <br>
+        </div>
+        <input type="text" id="nombre" placeholder="Nombre Paciente">
+        <br>
+        <form onsubmit="return false;"> <!-- Evita recargar al presionar Enter -->
+            <label class="Servicios" for="opciones">Servicio</label>
+            <select name="opciones" id="opciones">
+                <option value="Caja">Caja</option>
+                <option value="Recepción">Recepción</option>
+            </select>      
+        </form>    
+        <button class="my-button" onclick="guardarNombre()">Guardar</button>
+    </div>
+
+    <!-- ✅ Carga el script después de que el DOM esté completo -->
+    <script src="Scripts_Jv/Script_turnero.js"></script>
+</body>
+</html>
+
